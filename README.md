@@ -6,7 +6,7 @@
 - Run migrations (**php artisan migrate**)
  - Then you need to start the schedule with command php artisan **schedule:work**
  - Alternate you can run http://**{project}**/faker/{numberOfRecords} to get fake data.
-
+ - For task requirements see Wiki tab.
 
 ###Technologies used:
 - Laravel Framework 8
