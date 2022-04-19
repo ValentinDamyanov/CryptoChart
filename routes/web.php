@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/fake/{num}', 'HomeController@faker');
-Route::get('/', 'HomeController@index');
-Route::post('/add_to_price_alert', 'HomeController@addToPriceAlert');
+Route::get('/fake/{num}', [HomeController::class, 'faker']);
+Route::get('/', [HomeController::class, 'index']);
+Route::post('/add_to_price_alert', [HomeController::class, 'addToPriceAlert']);
