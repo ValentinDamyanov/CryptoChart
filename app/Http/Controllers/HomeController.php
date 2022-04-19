@@ -59,6 +59,8 @@ class HomeController extends Controller
     public function index()
     {
         $dbData = $this->_rateRepository->getRates();
+        if ($dbData->isEmpty()) return view('empty');
+
         $ratesData = [];
         foreach ($dbData as $key => $rate) {
             $price = $rate->last_price_average;
